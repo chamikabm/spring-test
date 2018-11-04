@@ -19,8 +19,12 @@
 
     <bean id="myCricketCoach" class="com.spring.handson.CricketCoach">
         <property name="fortuneService" ref="myFortune"/>
+
+        <!--Example for Hardcoding values.-->
         <!--<property name="emailAddress" value="chamika@123.com"/>-->
         <!--<property name="team" value="Rajasthan Royals."/>-->
+
+        <!--Example for Reading values from Properties file.-->
         <property name="emailAddress" value="${foo.email}"/>
         <property name="team" value="${foo.team}"/>
     </bean>

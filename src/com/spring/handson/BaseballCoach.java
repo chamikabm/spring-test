@@ -5,6 +5,7 @@ public class BaseballCoach implements Coach {
     private FourtuneService fortuneService;
 
     public BaseballCoach(FourtuneService fortuneService) {
+        System.out.println("Hey!! Initializing the Baseball Coach.");
         this.fortuneService = fortuneService;
     }
 

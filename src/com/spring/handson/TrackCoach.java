@@ -1,10 +1,11 @@
 package com.spring.handson;
 
-public class TrachCoach implements Coach {
+public class TrackCoach implements Coach {
 
     private FourtuneService fortuneService;
 
-    public TrachCoach(FourtuneService fortuneService) {
+    public TrackCoach(FourtuneService fortuneService) {
+        System.out.println("Hello!! Initializing the Track Coach.");
         this.fortuneService = fortuneService;
     }
 
