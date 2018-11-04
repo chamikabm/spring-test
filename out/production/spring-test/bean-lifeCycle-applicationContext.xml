@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Define the Dependency beans -->
+    <bean id="myFortune"
+          class="com.spring.handson.HappyFortuneService"/>
+
+
+    <!-- Define the Dependent beans with the life cycle hooks. -->
+    <bean id="myLifeCycleCoach"
+          class="com.spring.handson.TrackCoach"
+          scope="prototype"
+          init-method="doMyStartUpStuff"
+          destroy-method="doMyCleanUpStuff">
+        <constructor-arg ref="myFortune"/>
+    </bean>
+</beans>
