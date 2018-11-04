@@ -2,10 +2,10 @@ package com.spring.handson;
 
 public class BaseballCoach implements Coach {
 
-    private FourtuneService fourtuneService;
+    private FourtuneService fortuneService;
 
-    public BaseballCoach(FourtuneService fourtuneService) {
-        this.fourtuneService = fourtuneService;
+    public BaseballCoach(FourtuneService fortuneService) {
+        this.fortuneService = fortuneService;
     }
 
     @Override
@@ -15,6 +15,6 @@ public class BaseballCoach implements Coach {
 
     @Override
     public String getDailyFortune() {
-        return fourtuneService.getFortune();
+        return fortuneService.getFortune();
     }
 }
